@@ -1,31 +1,41 @@
 /**  Navigation **/
 
 .nav{
-  margin-top: -9px;
-  margin-left: -9px;
-  margin-right: -9px;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  position:fixed;
+  z-index:6;
+  position:fixed;
+  width:80%;
 }
 
 
 .nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background-color: #e3e3e3;
+    background-color: rgb(18, 18, 18);
     height: 60px;
     margin-top: 0px;
+    text-align:center;
   }
 
+.navwrap{
+
+}
+
 .nav li {
-  float: right;
+   display:inline-block;
 
 }
 
 
 .nav li a {
+    font-size: 20px;
     display: block;
-    color: rgb(45, 45, 45);
+    color: rgb(158, 158, 158);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -33,4 +43,39 @@
 
 .nav li a:hover {
     background-color: #ffffff;
+}
+
+
+
+/**  Home page**/
+
+body {
+  background-color:rgb(18, 18, 18);
+}
+
+#moving-background{
+  border: black solid 2px;
+  z-index:5;
+  background-image: url(images/homebackground.jpg);
+  background-position: 50% 20%;
+  top: 0;
+  left: 0;
+  margin-top: 10%;
+  margin-left: 8%;
+  width: 84%;
+  height: 70%;
+  position: absolute;
+  -webkit-animation: Scroll 200s linear infinite;
+  animation: Scroll 200s linear infinite;
+  background-size: cover;
+}
+
+@-webkit-keyframes Scroll {
+from {background-position: 0 0;}
+to {background-position: 0 -3330px;}
+}
+
+@keyframes Scroll {
+from {background-position: 0 0;}
+to {background-position: 0 -3330px;}
 }
